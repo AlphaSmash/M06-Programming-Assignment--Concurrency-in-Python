@@ -1,0 +1,8 @@
+import datetime
+current_date = "2023 12 01"
+with open('today.txt', 'w') as file:
+    file.write(current_date)
+with open('today.txt', 'r') as file:
+    today_string = file.read()
+fmt = "%Y %m %d"
+parsed_date = datetime.datetime.strptime(today_string, fmt)
